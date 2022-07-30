@@ -1,0 +1,53 @@
+@use '../sass/mixins';
+@use '../sass/variables';
+.raft-team {
+	padding: 45px 0;
+	.container {
+		h1{
+			width: 100%;
+			text-align: center;
+		}
+		@include mixins.flex(column, flex-start, stretch);
+		@media screen and (min-width: variables.$mobile-lg) {
+			@include mixins.flex(row, space-between, stretch);
+			flex-wrap: wrap;
+			column-gap: 20px;
+			row-gap: 20px;
+		}
+
+		
+		.excerpt-post{
+			.btn-group{
+				
+				.btn{
+					background-color: variables.$color-light-blue;
+   					padding: 5px 15px;
+   					border-radius: 10px;
+					color: black;
+				}
+			}
+		}
+	}
+	.pagination {
+		margin-top: 45px;
+		.pagination-container {
+			display: flex;
+			justify-content: center;
+			column-gap: 30px;
+			button {
+				font-size: 25px;
+				border: none;
+				background-color: transparent;
+				cursor: pointer;
+				@media screen and (max-width: variables.$mobile-md) {
+					font-size: 16px;
+				}
+				img {
+					@media screen and (max-width: variables.$mobile-md) {
+						height: 12px;
+					}
+				}
+			}
+		}
+	}
+}

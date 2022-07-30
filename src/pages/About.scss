@@ -1,0 +1,65 @@
+@use '../sass/variables';
+
+.post{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: variables.$mobile-sm) {
+        margin-top: 0;
+    }
+
+    .text-holder{
+        width: 100%;
+    
+
+        p{       
+            @media screen and (max-width: variables.$tableet-md) {
+                width: 100%;
+                padding: 5px 20px;
+                margin: 0;
+            }
+            padding: 0 150px;    
+        }
+
+
+        h2{
+            font-size: 35px;
+            color: rgb(0, 0, 0);
+            text-decoration: underline;
+            text-align: center;
+            @media screen and (min-width: variables.$mobile-sm) {
+                margin: 0;
+                font-size: 22px;
+                padding: 15px;
+                
+            }
+        }
+    }
+
+    img{
+        width: 100%;
+        @media screen and (max-width: variables.$mobile-lg) {
+            height: 90px;
+        }
+        &:last-child{
+            width: 40%;
+            height: 40%;
+            @media screen and (max-width: variables.$tablet-sm){
+                width: 70%;
+                height: 70%;
+            }
+        }
+    }
+    .second-pic{
+        margin-top: 50px;
+        border-radius: 5px;
+    }
+
+    @media screen and (min-width: variables.$tableet-md) {
+        width: 100%;
+    }
+
+}
